@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+const { program } = require('commander');
+const package = require('../package');
+
+program
+    .option('--init', 'helps to init your app')
+    .usage('[command] [options]')
+    .version(package.version)
+    .on('--help', () => {
+        console.log('ДЛя первичной настройки проекта запустите tolst-cli --init')
+    })
+    .parse();
+
+// we can pre-set up the environment for the platform users
+const options = program.opts();
+console.log(options)
+
+if (options.init) {
+    // install some dependencies
+    // require('child_process').execSync('npm i react', { stdio: 'inherit' })
+    // change smth in the package json
+    // const fs = require('fs') // file system
+    const path = require('path')
+    const packagepath = path.resolve('package.json')
+    const package = require(packagepath)
+    console.log(package);
+}

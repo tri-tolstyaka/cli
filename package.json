@@ -1,0 +1,27 @@
+{
+  "name": "@tolst/cli",
+  "version": "0.0.0",
+  "description": "This is the platform for the microfrontends",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./bin/tolst-cli --init",
+    "new:version": "npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shuvani/tolst-cli.git"
+  },
+  "author": "Alina Bogdanova, Anton Brisilin, Anna Gorb",
+  "bin": {
+    "tolst-cli": "bin/tolst-cli"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shuvani/tolst-cli/issues"
+  },
+  "homepage": "https://github.com/Shuvani/tolst-cli#readme",
+  "dependencies": {
+    "@types/node": "^16.7.1",
+    "commander": "^8.1.0"
+  }
+}
