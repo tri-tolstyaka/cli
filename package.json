@@ -1,7 +1,7 @@
 {
   "name": "@tri-tolstiaka/cli",
-  "version": "1.0.0",
-  "description": "This is the platform for the microfrontends",
+  "version": "1.0.3",
+  "description": "This is the platform for the microfrontend",
   "main": "index.js",
   "scripts": {
     "start": "node ./bin/tolst-cli --init",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Shuvani/tolst-cli.git"
+    "url": "git+https://github.com/tri-tolstyaka/cli.git"
   },
   "author": "Alina Bogdanova, Anton Brisilin, Anna Gorb",
   "bin": {
@@ -17,9 +17,9 @@
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Shuvani/tolst-cli/issues"
+    "url": "https://github.com/tri-tolstyaka/cli/issues"
   },
-  "homepage": "https://github.com/Shuvani/tolst-cli#readme",
+  "homepage": "https://github.com/tri-tolstyaka/cli#readme",
   "dependencies": {
     "@types/node": "^16.7.1",
     "commander": "^8.1.0"
