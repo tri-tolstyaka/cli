@@ -1,14 +1,16 @@
 #!/usr/bin/env node
 const { program } = require('commander');
+const fs = require('fs');
 const package = require('../package');
 
 program
     .option('--init', 'helps to init your app')
     .option('--server', 'starts dev server')
+    .option('-p, --port <port>', 'port at which server will listen', 8080)
     .usage('[command] [options]')
     .version(package.version)
     .on('--help', () => {
-        console.log('ДЛя первичной настройки проекта запустите tolst-cli --init')
+        console.log('For project initial setup launch tolst-cli --init')
     })
     .parse();
 
@@ -18,13 +20,23 @@ console.log(options)
 
 if (options.init) {
     // install some dependencies
-    require('child_process').execSync('npm i react', { stdio: 'inherit' })
+    require('child_process')
+        .execSync(
+            'npm i react react-dom @tri-tolstiaka/dev-server',
+            { stdio: 'inherit' }
+        )
+
     const path = require('path')
     const packagepath = path.resolve('package.json') // find relative to the place where process was started
+
     const package = require(packagepath)
-    console.log(package);
+    package.scripts = package.scripts || {}
+    package.scripts.start = 'npx tolst-cli --server'
+
+    fs.writeFileSync(packagepath, JSON.stringify(package, null, 2) + '\n')
 }
 
 if (options.server) {
-    console.log('Not implemented yet')
+    const startServer = require('@tri-tolstiaka/dev-server')
+    startServer({ port: options.port })
 }
