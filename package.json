@@ -1,5 +1,5 @@
 {
-  "name": "@tolst/cli",
+  "name": "@tri-tolstiaka/cli",
   "version": "1.0.0",
   "description": "This is the platform for the microfrontends",
   "main": "index.js",
