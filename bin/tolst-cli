@@ -4,6 +4,7 @@ const package = require('../package');
 
 program
     .option('--init', 'helps to init your app')
+    .option('--server', 'starts dev server')
     .usage('[command] [options]')
     .version(package.version)
     .on('--help', () => {
@@ -17,12 +18,13 @@ console.log(options)
 
 if (options.init) {
     // install some dependencies
-    // require('child_process').execSync('npm i react', { stdio: 'inherit' })
-    // change smth in the package json
-    // const fs = require('fs') // file system
+    require('child_process').execSync('npm i react', { stdio: 'inherit' })
     const path = require('path')
     const packagepath = path.resolve('package.json') // find relative to the place where process was started
-    // const packagepath = path.resolve(__dirname, 'package.json') // find relative to the place where the file is located
     const package = require(packagepath)
     console.log(package);
+}
+
+if (options.server) {
+    console.log('Not implemented yet')
 }
