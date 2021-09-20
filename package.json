@@ -22,7 +22,7 @@
   "homepage": "https://github.com/tri-tolstyaka/cli#readme",
   "dependencies": {
     "@tri-tolstiaka/dev-server": "^1.1.10",
-    "@tri-tolstiaka/fire.app": "^1.0.2",
+    "@tri-tolstiaka/fire.app": "^1.2.0",
     "@tri-tolstiaka/templates": "^1.0.2",
     "@types/node": "^16.7.1",
     "commander": "^8.1.0"
