@@ -2,8 +2,11 @@
 This is the platform for the microfrontends
 
 ## How to check that it works?
+Into your project directory run:
 ```
-npm start
+npx @tri-tolstiaka/cli --init
+npm install .
+npx @tri-tolstiaka/cli --server
 ```
 
 ## How to publish?
