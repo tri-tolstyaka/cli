@@ -2,6 +2,7 @@
 const { program } = require('commander');
 const fs = require('fs');
 const package = require('../package');
+const childProcess = require('child_process')
 
 program
     .option('--init', 'helps to init your app')
@@ -21,14 +22,14 @@ console.log(options)
 if (options.init) {
     // install some dependencies
     let dependencies = [
-        '@tri-tolstiaka/dev-server', 
-        'react', 
-        'react-dom', 
-        'typescript', 
+        '@tri-tolstiaka/dev-server',
+        'react',
+        'react-dom',
+        'typescript',
         'ts-loader'
     ]
 
-    require('child_process')
+    childProcess
         .execSync(
             'npm i ' + dependencies.join(' '),
             { stdio: 'inherit' }
