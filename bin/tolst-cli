@@ -20,9 +20,17 @@ console.log(options)
 
 if (options.init) {
     // install some dependencies
+    let dependencies = [
+        '@tri-tolstiaka/dev-server', 
+        'react', 
+        'react-dom', 
+        'typescript', 
+        'ts-loader'
+    ]
+
     require('child_process')
         .execSync(
-            'npm i react react-dom @tri-tolstiaka/dev-server',
+            'npm i ' + dependencies.join(' '),
             { stdio: 'inherit' }
         )
 
