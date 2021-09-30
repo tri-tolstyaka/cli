@@ -3,6 +3,7 @@ const path = require('path')
 const childProcess = require('child_process')
 const packagePath = path.resolve('package.json') // find relative to the place where process was started
 const tsConfigPath = path.resolve('tsconfig.json');
+const tolstConfig = path.resolve('tolst.config.js');
 
 
 const init = () => {
@@ -58,6 +59,9 @@ const init = () => {
             ]
         }
         fs.writeFileSync(tsConfigPath, JSON.stringify(isConfig, null, 4))
+    }
+    if (!fs.existsSync(tolstConfig)) {
+        fs.writeFileSync(tolstConfig, {})
     }
     fs.writeFileSync(packagePath, JSON.stringify(package, null, 4) + '\n')
 }
