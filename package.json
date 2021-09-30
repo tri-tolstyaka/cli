@@ -20,10 +20,10 @@
   },
   "homepage": "https://github.com/tri-tolstyaka/cli#readme",
   "dependencies": {
-    "@tri-tolstiaka/dev-server": "^3.0.3",
+    "@tri-tolstiaka/dev-server": "^3.0.4",
     "@tri-tolstiaka/fire.app": "^1.3.6",
     "@tri-tolstiaka/templates": "^2.0.0",
-    "@tri-tolstiaka/webpack-config": "^1.0.3",
+    "@tri-tolstiaka/webpack-config": "^1.0.4",
     "@types/node": "^16.7.1",
     "commander": "^8.1.0"
   }
