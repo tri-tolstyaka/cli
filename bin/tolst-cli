@@ -5,6 +5,8 @@ const package = require('../package');
 program
     .option('--init', 'helps to init your app')
     .option('--server', 'starts dev server')
+    .option('--build', 'build project')
+    .option('--prod', 'production mode')
     .option('-p, --port <port>', 'port at which server will listen', 8080)
     .usage('[command] [options]')
     .version(package.version)
@@ -23,4 +25,8 @@ if (options.init) {
 if (options.server) {
     const startServer = require('@tri-tolstiaka/dev-server')
     startServer({ port: options.port })
+}
+
+if (options.build) {
+    require('../src/build')(options);
 }
