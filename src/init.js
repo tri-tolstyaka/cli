@@ -60,15 +60,6 @@ const init = () => {
         }
         fs.writeFileSync(tsConfigPath, JSON.stringify(isConfig, null, 4))
     }
-    if (!fs.existsSync(isTolstConfig)) {
-        const tolstConfig = module.exports = {
-            webpackConfig: {},
-            config: {},
-            navigations: {},
-            features: {}
-        }
-        fs.writeFileSync(isTolstConfig, JSON.stringify(tolstConfig, null, 4))
-    }
     fs.writeFileSync(packagePath, JSON.stringify(package, null, 4) + '\n')
 }
 

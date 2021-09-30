@@ -15,7 +15,7 @@ npx tolst-cli --help // check available actions with descriptions
 ```
 
 # Be careful!
-Set up your *index.tsx* like in an example -> https://github.com/tri-tolstyaka/dummy
+Set up your *index.tsx* and *tolst.config.js* like in an example -> https://github.com/tri-tolstyaka/dummy
 
 # Config file
 If you want to edit the platform parameters, you can create the *tolst.config.js* in your project
