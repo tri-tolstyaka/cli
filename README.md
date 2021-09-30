@@ -21,4 +21,7 @@ Set up your *index.tsx* like in an example -> https://github.com/tri-tolstyaka/d
 If you want to edit the platform parameters, you can create the *tolst.config.js* in your project
 
 List of parameters:
-* 
+* apps
+* navigations
+* config
+* features
