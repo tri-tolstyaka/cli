@@ -5,7 +5,7 @@ module.exports = ({ prod }) => {
     process.env.NODE_ENV = prod ? 'production' : 'development'
     process.env.ENTRY = getModuleData().entryPoint
 
-    const config = require('@shuva/webpack-config');
+    const config = require('@tri-tolstiaka/webpack-config');
 
     webpack(config, (err, stats) => {
         if (err) {
