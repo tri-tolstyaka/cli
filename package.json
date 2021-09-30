@@ -1,6 +1,6 @@
 {
   "name": "@tri-tolstiaka/cli",
-  "version": "3.0.12",
+  "version": "3.0.13",
   "description": "This is the platform for the microfrontend",
   "main": "index.js",
   "scripts": {
