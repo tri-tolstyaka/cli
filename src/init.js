@@ -55,7 +55,7 @@ const init = () => {
                 "node_modules/@types/jest"
             ]
         }
-        fs.writeFileSync(packagePath, JSON.stringify(isConfig, null, 4))
+        fs.writeFileSync(tsConfigPath, JSON.stringify(isConfig, null, 4))
     }
     fs.writeFileSync(packagePath, JSON.stringify(package, null, 4) + '\n')
 }
