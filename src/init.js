@@ -62,10 +62,10 @@ const init = () => {
     }
     if (!fs.existsSync(isTolstConfig)) {
         const tolstConfig = {
-            "webpackConfig": {},
-            "config": {},
-            "navigations": {},
-            "features": {}
+            webpackConfig: {},
+            config: {},
+            navigations: {},
+            features: {}
         }
         fs.writeFileSync(isTolstConfig, JSON.stringify(tolstConfig, null, 4))
     }
