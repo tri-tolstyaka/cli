@@ -33,6 +33,8 @@ const init = () => {
     package.scripts.tolst_help = 'npx tolst-cli --help';
     package.scripts.tolst_init = 'npx tolst-cli --init';
     package.scripts.start = 'tolst-cli --server';
+    package.scripts.build = 'tolst-cli --build';
+    package.scripts.prod = 'tolst-cli --prod';
 
     if (!fs.existsSync(tsConfigPath)) {
         const isConfig = {
