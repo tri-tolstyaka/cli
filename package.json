@@ -4,7 +4,6 @@
   "description": "This is the platform for the microfrontend",
   "main": "index.js",
   "scripts": {
-    "start": "node ./bin/tolst-cli --init",
     "new:version": "npm publish --access public"
   },
   "repository": {

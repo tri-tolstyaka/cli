@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 const { program } = require('commander');
-const fs = require('fs');
 const package = require('../package');
-const childProcess = require('child_process')
 
 program
     .option('--init', 'helps to init your app')
@@ -17,32 +15,9 @@ program
 
 // we can pre-set up the environment for the platform users
 const options = program.opts();
-console.log(options)
 
 if (options.init) {
-    // install some dependencies
-    let dependencies = [
-        '@tri-tolstiaka/dev-server',
-        'react',
-        'react-dom',
-        'typescript',
-        'ts-loader'
-    ]
-
-    childProcess
-        .execSync(
-            'npm i ' + dependencies.join(' '),
-            { stdio: 'inherit' }
-        )
-
-    const path = require('path')
-    const packagepath = path.resolve('package.json') // find relative to the place where process was started
-
-    const package = require(packagepath)
-    package.scripts = package.scripts || {}
-    package.scripts.start = 'npx tolst-cli --server'
-
-    fs.writeFileSync(packagepath, JSON.stringify(package, null, 2) + '\n')
+    require('../src/init')(options);
 }
 
 if (options.server) {
